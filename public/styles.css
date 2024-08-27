@@ -1,0 +1,319 @@
+
+
+
+
+
+
+
+
+
+/* Imagen principal del proyecto */
+/* Imagen principal del proyecto */
+.hero-image {
+    width: 100%;
+    height: 100vh; /* Mantiene la imagen a pantalla completa */
+    background: url('CCR1.jpeg') no-repeat center 80%; /* Ajusta la posición vertical para subir la imagen */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+    
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Filtro oscuro para mejor contraste */
+    z-index: -1;
+}
+
+
+.hero-text {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons .btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    color: white;
+    background-color: #ff5e5e;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hero-buttons .btn.secondary {
+    background-color: #333;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #ff8080;
+}
+
+.hero-buttons .btn.secondary:hover {
+    background-color: #555;
+}
+
+
+
+/* Estilos para el logo en la barra de navegación */
+.navbar-logo {
+    width: 40px; /* Tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+
+/* Contenedor del logo */
+.mission-vision-logo {
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center;
+    margin: 2rem 0; /* Espacio arriba y abajo del logo */
+}
+
+.logo-img {
+    max-width: 150px; /* Ajusta el tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+.card-img-top {
+    height: 400px;
+    object-fit: cover;
+}
+.menu-item {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+.menu-item:hover {
+    background-color: #f0f0f0;
+}
+.card-container {
+    display: none; /* Oculta las tarjetas por defecto */
+}
+.card-container.active {
+    display: block; /* Muestra la tarjeta activa */
+}
+.mission-vision {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+
+
+/*modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.navbar.dark-mode {
+    background-color: #333333;
+}
+
+.card.dark-mode {
+    background-color: #2c2c2c;
+}
+
+
+
+/*FRONT END de Misión y Visión*/
+/* Contenedor de Misión y Visión */
+#mission-vision-container {
+    width: 100%;
+    background: #f0f4f8; /* Color de fondo más amigable */
+    padding: 4rem 0; /* Espaciado superior e inferior */
+    display: flex;
+    justify-content: center; /* Centra el contenedor dentro del fondo */
+    box-sizing: border-box;
+}
+
+/* Contenedor interior de Misión y Visión */
+#mission-vision {
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    width: 90%; /* Asegura que el contenedor ocupe el 90% del ancho disponible */
+    background-color: #ffffff; /* Fondo blanco para la sección */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch; /* Asegura que los cuadros tengan la misma altura */
+    gap: 2rem;
+    box-sizing: border-box;
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Caja de Misión y Visión */
+.mission-vision-box {
+    flex: 1; /* Permite que las cajas crezcan igualmente */
+    padding: 2rem;
+    background: none;
+    border-radius: 10px; /* Bordes redondeados para las cajas */
+    border: 2px solid #ccc; /* Borde para el recuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las cajas */
+    margin: 0 1rem; /* Espaciado entre cajas */
+}
+
+/* Encabezado de Misión y Visión */
+.mission-vision-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.mission-vision-icon {
+    font-size: 3rem; /* Tamaño del icono */
+    margin-right: 15px;
+    color: #333; /* Color del icono */
+}
+
+.mission-vision h2 {
+    font-size: 2.5rem; /* Aumenta el tamaño del texto */
+    color: #333;
+}
+
+.mission-vision p {
+    font-size: 1.2rem; /* Aumenta el tamaño del texto */
+    color: #555;
+}
+
+
+
+
+/* Modo oscuro */
+body.dark-mode #mission-vision {
+    background-color: #2c2c2c; /* Fondo para modo oscuro */
+    color: #ffffff;
+}
+
+
+
+
+/* Estilos para vista móvil */
+@media (max-width: 768px) {
+    #mission-vision {
+        flex-direction: column; /* Cambia a columna para vista móvil */
+        gap: 1rem; /* Ajusta el espacio entre los elementos */
+    }
+
+    .mission-vision-box {
+        padding: 1rem; /* Ajusta el padding para vista móvil */
+        margin: 0; /* Elimina el espaciado entre cajas */
+    }
+
+    .mission-vision h2 {
+        font-size: 2rem; /* Ajusta el tamaño del texto para vista móvil */
+    }
+
+    .mission-vision p {
+        font-size: 1rem; /* Ajusta el tamaño del texto para vista móvil */
+    }
+}
+
+
+
+/* Es el conteiner del menu y del layout de las carreras */
+ #main-content-container {
+        background-color: #f0f8ff; /* Azul claro pastel */
+        padding: 80px;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 1500px; /* Ajusta el valor según sea necesario */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Estilo para la galería de imágenes */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+    /* Estilo para las redes sociales    */
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-icon i {
+        font-size: 40px; /* Ajusta el tamaño según sea necesario */
+        color: #333;
+        transition: color 0.3s, transform 0.3s;
+    }
+    
+    .social-icon i:hover {
+        color: #007bff;
+        transform: scale(1.1);
+    }
